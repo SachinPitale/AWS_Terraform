@@ -15,6 +15,6 @@ output "instance_publicdns" {
 
 output "instance_publicdns2" {
   description = "EC2 Instance Public DNS"
-  value = toset({for c, instance in aws_instance.myec2: c => instance.public_dns})
+  value = tomap({for c, instance in aws_instance.myec2: c => instance.public_dns})
   
 }
