@@ -9,7 +9,7 @@ resource "aws_instance" "myec2" {
   vpc_security_group_ids = [aws_security_group.vpc-ssh.id,aws_security_group.vpc-web.id]
   count =2 
   tags = {
-    "Name" = "EC2 Demo 2-${count-index}"
+    "Name" = "EC2-Demo-${count-index}"
   }
   
 }
